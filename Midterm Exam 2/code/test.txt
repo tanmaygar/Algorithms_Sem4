@@ -1,0 +1,11 @@
+MinPositiveInterval(Array[0:n]) 
+    If sum of all elements of Array is zero 
+        return 1 
+    k = 0 
+    while Array[k] < 0 
+        Increment k 
+    l = n 
+    while Array[l] < 0 
+        Decrement l 
+    m = Index of minimum element in Array[k:l] 
+    return MinPositiveInterval(Array[k:m-1]) + MinPositiveInterval(Array[m+1,l])
